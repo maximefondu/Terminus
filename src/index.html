@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>DataPlay &ndash; Terminus</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="description" content="">
+  <!-- Meta Partage -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+  <meta name="msapplication-TileColor" content="#000000">
+  <meta name="theme-color" content="#000000">
+  <!-- Favicon -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="styles/app.css">
+</head>
+<body>
+  <header>
+    <div class="burger">
+      <svg class="burger__svg" viewBox="0 0 100 100">
+        <path class='burger__path burger__path--1' d="M0 70l28-28c2-2 2-2 7-2h64"/>
+        <path class='burger__path burger__path--2' d="M0 50h99"/>
+        <path class='burger__path burger__path--3' d="M0 30l28 28c2 2 2 2 7 2h64"/>
+      </svg>
+    </div>
+
+    <nav class="menu">
+      <ul class="menu__content">
+        <li class='menu__el'><a class="menu__link" href="#lamanoeuvre">La man&oelig;uvre</a></li>
+        <li class='menu__el'><a class="menu__link" href="#dataPlay">Le projet</a></li>
+        <li class='menu__el'><a class="menu__link" href="#team">L'équipe</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="animation">
+      <div class="animation__content"></div>
+    </section>
+
+    <section class="section section--first depart">
+      <h1 class="section__h1">Terminus</h1>
+      <div class="section__div">
+        <img class="image" src="assets/images/logo.png" srcset='assets/images/logo@2x.png 2x' alt="Logo terminus">
+        <h2 class="section__titles section__titles--first">Tout le monde <span class="span span--none">descend</span></h2>
+        <p class="section__paragraph">Une expérience qui se veut ludique et qui vous fait parcourir différents trajets de moyens de transport sur Namur.</p>
+      </div>
+      <div class="pint"></div>
+    </section>
+
+    <span class="ancres" id="lamanoeuvre"></span>
+    <section class="section section--second">
+      <div class="section__padding">
+        <h2 class="section__titles">La <span class="span">man&oelig;uvre</span></h2>
+        <p>Le but de Terminus est de donner des informations à l’utilisateur sur des autobus namurois ainsi que sur des Namourettes, de façon amusante et dynamique. Pour faire court, vous pouvez démarrer et stopper à tout moment un véhicule, ce qui vous permet de suivre sa trajectoire, et par conséquent, repérer les différents arrêts parcourus.</p>
+        <p>Ce projet est un vrai stimulus pour vos sens. Aussi bien le visuel que l’audio vous offriront une expérience cocasse.</p>
+      </div>
+    </section>
+
+    <!-- DATA-PLAY -->
+    <span class="ancres" id="dataPlay"></span>
+    <section class="dataPlay">
+
+      <h2 class="section__titles section__titles--bot section__titles--none">Le projet</h2>
+
+      <div class="map">
+        <ul class="delay">
+          <li data-time='0' class='delay__el delay__el--3'></li>
+          <li data-time='0' class='delay__el delay__el--33'></li>
+          <li data-time='0' class="delay__el delay__el--42"></li>
+          <li data-time='0' class='delay__el delay__el--52'></li>
+          <li data-time='0' class='delay__el delay__el--1'></li>
+        </ul>
+
+        <button class="btn__muted">Couper le son</button>
+
+        <!-- map -->
+        <svg class="roads" viewBox="0 0 931 516">
+          <symbol  id="Stop" viewBox="-8.2 -8 16.2 16.2">
+            <circle class="roads__stop" cx="-0.1" cy="0.1" r="7.1"/>
+          </symbol>
+    
+          <!--MEUSE-->
+          <polygon class="roads__meuse" points="931.6,243.7 834.6,278.8 740.5,335.3 688.3,372.1 640.3,404 614.2,407.8 575.8,403.2 473.9,422.4 440.2,429 385.6,417.4 282.7,382.1 258.5,359.5 205,277.3 169.4,206.6 128.7,143.2 86.8,104 36.5,81.7 0,73.4 0,98.3 38.6,102.3 80.8,120.4 117.4,154.5 149.8,206 178,254.2 199.4,302.5 236,356.5 265.2,388.2 316.9,410.6 383.6,431.1 429.7,441.2 453.9,441.2 539.9,422 579.1,418.8 610.6,423.2 561.8,471 512.5,516 571.9,516.5 620.8,467.9 694.9,420.2 778.1,360 855,316.7 931.6,287.9 "/>
+    
+          <!--BUS52/GREEN-->
+          <g class="roads__line52">
+            <path class="roads__52 selected" d="M38,207.8l15.9-2.7l-23.7,85.1l1,12.2c-0.1,0-0.1,0-0.2,0.1c-2.2,0.9-3.8,3.1-3.8,5.7c0,3.4,2.8,6.2,6.2,6.2c1.9,0,3.6-0.9,4.8-2.3L157.6,377"/>
+            <polyline class="roads__52" points="157.6,377 223,412.6 294.9,412.6 308,384.5 326.1,392.4"/>
+            <polyline class="roads__52" points="326.1,392.4 340.1,398.3 348,396.6 353.1,387.2 353.5,343.9"/>
+            <polyline class="roads__52" points="353.5,343.9 353.4,271.1 297.6,263.4 329.5,219.4 289.7,188.3"/>
+            <polyline class="roads__52" points="289.7,188.3 279.5,179.8 294.9,155 353.3,148.7 393.1,142.7 419.9,138.5 420.1,144.3 437.7,150 467.4,159 472.8,200.2 471.9,233.4"/>
+            <polyline class="roads__52" points="471.9,233.4 463.5,272.8 463,285.2 462.3,306.5 488.5,358.1"/>
+            <polyline class="roads__52" points="488.5,358.1 500,381 530.4,378.2 578.7,365.8 597.2,349.7"/>
+            <polyline class="roads__52" points="597.2,349.7 617.7,345.4 636.4,340.8 674.3,303.5 696.7,285.3 714.5,256.9 720.1,250.4 726.4,248.1"/>
+            <polyline class="roads__52" points="726.4,248.1 878.6,227.1 904.6,208.3 917.4,206.5"/>
+            <line class="roads__52" x1="908.6" y1="207.7" x2="923.5" y2="207.4"/>
+          </g>
+    
+          <!--BUS42/RED-->
+          <g class="roads__line42">
+            <path class="roads__42 selected" d="M582,441l4.5-46l16.1-0.1c0,4.2,3.4,7.6,7.6,7.6c4.2,0,7.6-3.4,7.6-7.6c0,0,0-0.1,0-0.1l25.8-2.7l57-43.8c3.6-0.2,6.4-3.1,6.4-6.7c0-3.7-3-6.7-6.7-6.7c-1.2,0-2.3,0.3-3.2,0.8l-2.8-1.4l-3.4-5"/>
+            <line class="roads__42" x1="691.1" y1="329.3" x2="619.1" y2="222.4"/>
+            <polyline class="roads__42" points="619.1,222.4 611.2,210.7 582.6,194.3 420.1,144.6 377.3,148.2"/>
+            <polyline class="roads__42" points="377.3,148.2 294.7,155.1 254.8,160.4 204.9,118 205.1,96.1 216,79.1 277.9,74.8"/>
+            <path class="roads__42" d="M277.9,74.8l16.3-0.8c-1.7,1.6-2.8,3.9-2.8,6.5c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9c0-1.4-0.3-2.8-1-4l15.4,0.1l6.1,2.9l70.3-5.8"/>
+          </g>
+    
+          <!--BUS3/Mauve-->
+          <g class="roads__line3">
+            <polyline class="roads__3 selected" points="548.5,467.1 582,441 586.6,395 579,395.5 564.4,385.2 552,373.5 546,349.5 "/>
+            <polyline class="roads__3" points="546,349.5 540.9,338.5 499.2,307"/>
+            <polyline class="roads__3" points="499.2,307 480,292.5 438,281.5 417,272.4"/>
+            <polyline class="roads__3" points="417,272.4 401.1,265.5 393,263.5 395,146.8 420.1,144.6 420,138.5 380.8,144.5"/>
+            <polyline class="roads__3" points="380.8,144.5 354,148.6 294.3,155.1 255.1,160.5 194.7,200.3"/>
+            <path class="roads__3" d="M194.7,200.3l-38,25.1c-1.2-2-3.3-3.3-5.8-3.3c-3.7,0-6.7,3-6.7,6.7c0,1.5,0.5,2.9,1.3,4l-10.3,6.9"/>
+            <line class="roads__3" x1="135.2" y1="239.8" x2="47" y2="299.5"/>
+            <path class="roads__3" d="M47,299.5l-8.5,5.7c-1.1-1.9-3.1-3.1-5.5-3.1c-3.5,0-6.3,2.8-6.3,6.3c0,1,0.2,1.9,0.6,2.7L-3,326.7"/>
+          </g>
+    
+          <!--BUS33/YELLOW-->
+          <g class='roads__line33'>
+            <path class="roads__33 selected" d="M439,150.4l28.9,8.8l59.8-23.9l0,0c2.5,3.3,6.5,5.5,11,5.5c7.6,0,13.8-6.2,13.8-13.8c0-5.4-3.1-10-7.6-12.3l0,0l-7-72.3"/>
+            <polyline class="roads__33" points="538,42.5 542,31.5 551,18.5 570,10.5 592,-2.5"/>
+          </g>
+    
+          <!--NAMOURETTE/YELLOW-->
+          <g class="roads__line1">
+              <polyline class="roads__1 selected" points="88.5,116.5 122.8,147.2 185.7,248.7 209.1,300.4 243.5,354 270,383 335,410"/>
+              <polyline class="roads__1" points="343.5,412 428.5,436 450,435.5 569.5,411.5 613,416 642.5,412.5 706.5,371"/>
+              <line class="roads__1" x1="711" y1="366" x2="733.5" y2="379"/>
+              <polyline class="roads__1" points="728.5,383 620,456 568,500.5"/>
+            </g>
+    
+          <!--STOP-->
+          <g>
+    
+            <!--STOP BUS33-->
+            <g class="stop  stop__line33">
+              <use xlink:href="#Stop" class="stop__el"  width="16.2" height="16.2" id="N501zea" x="-8.2" y="-8" transform="matrix(1 0 0 -1 440.6 150.7001)"/>
+              <use xlink:href="#Stop" class="stop__el"  width="16.2" height="16.2" id="N501lba" x="-8.2" y="-8" transform="matrix(1 0 0 -1 537.9167 42.9501)"/>
+            </g>
+    
+            <!--STOP BUS52-->
+            <g class="stop stop__line52">
+              <use xlink:href="#Stop" class="stop__el"  width="16.2" height="16.2" id="N501lzb" x="-8.2" y="-8" transform="matrix(1 0 0 -1 38.5 207.4501)"/>
+              <use xlink:href="#Stop" class="stop__el"  width="16.2" height="16.2" id="N501mra" x="-8.2" y="-8" transform="matrix(1 0 0 -1 158.8333 376.4501)"/>
+              <use xlink:href="#Stop" class="stop__el"  width="16.2" height="16.2" id="N501mtb" x="-8.2" y="-8" transform="matrix(1 0 0 -1 327.5 391.7834)"/>
+              <use xlink:href="#Stop" class="stop__el"  width="16.2" height="16.2" id="N501msb" x="-8.2" y="-8" transform="matrix(1 0 0 -1 352.8333 344.4501)"/>
+              <use xlink:href="#Stop" class="stop__el"  width="16.2" height="16.2" id="N501gpc" x="-8.2" y="-8" transform="matrix(1 0 0 -1 290.5 188.1168)"/>
+              <use xlink:href="#Stop" class="stop__el"  width="16.2" height="16.2" id="N501heb" x="-8.2" y="-8" transform="matrix(1 0 0 -1 473.35 234.2001)"/>
+              <use xlink:href="#Stop" class="stop__el"  width="16.2" height="16.2" id="N501hhb" x="-8.2" y="-8" transform="matrix(1 0 0 -1 490.35 357.9501)"/>
+              <use xlink:href="#Stop" class="stop__el"  width="16.2" height="16.2" id="N501hba" x="-8.2" y="-8" transform="matrix(1 0 0 -1 597.35 348.7001)"/>
+              <use xlink:href="#Stop" class="stop__el"  width="16.2" height="16.2" id="N501gqb" x="-8.2" y="-8" transform="matrix(1 0 0 -1 726.6 247.2001)"/>
+              <use xlink:href="#Stop" class="stop__el"  width="16.2" height="16.2" id="N501hka" x="-8.2" y="-8" transform="matrix(1 0 0 -1 913.5 207.9501)"/>
+            </g>
+    
+            <!--STOP BUS3-->
+            <g class="stop stop__line3">
+              <use xlink:href="#Stop" class="stop__el" width="16.2" height="16.2" x="-8.1" y="-8.1" id="N501giy" transform="matrix(1 0 0 -1 550.2748 464.4753)"/>
+              <use xlink:href="#Stop" class="stop__el"  width="16.2" height="16.2" id="N501hia" x="-8.2" y="-8" transform="matrix(1 0 0 -1 547.375 349.3736)"/>
+              <use xlink:href="#Stop" class="stop__el"  width="16.2" height="16.2" id="N501mqa" x="-8.2" y="-8" transform="matrix(1 0 0 -1 500.25 306.6236)"/>
+              <use xlink:href="#Stop" class="stop__el"  width="16.2" height="16.2" id="N501mha" x="-8.2" y="-8" transform="matrix(1 0 0 -1 418.0833 271.957)"/>
+              <use xlink:href="#Stop" class="stop__el"  width="16.2" height="16.2" id="N501grc" x="-8.2" y="-8" transform="matrix(1 0 0 -1 381.3333 143.957)"/>
+              <use xlink:href="#Stop" class="stop__el"  width="16.2" height="16.2" id="N501fsa" x="-8.2" y="-8" transform="matrix(1 0 0 -1 194.3333 199.957)"/>
+              <use xlink:href="#Stop" class="stop__el"  width="16.2" height="16.2" id="N501fab" x="-8.2" y="-8" transform="matrix(1 0 0 -1 134.8333 239.957)"/>
+              <use xlink:href="#Stop" class="stop__el"  width="16.2" height="16.2" id="N501fdb" x="-8.2" y="-8" transform="matrix(1 0 0 -1 46.3333 298.957)"/>
+            </g>
+    
+            <!--STOP BUS42-->
+            <g class="stop stop__line42">
+              <use xlink:href="#Stop" class="stop__el"  width="16.2" height="16.2" id="N501gaa" x="-8.2" y="-8" transform="matrix(1 0 0 -1 585 433.6236)"/>
+              <use xlink:href="#Stop" class="stop__el"  width="16.2" height="16.2" id="N501fya" x="-8.2" y="-8" transform="matrix(1 0 0 -1 692.6667 328.957)"/>
+              <use xlink:href="#Stop" class="stop__el"  width="16.2" height="16.2" id="N501gra" x="-8.2" y="-8" transform="matrix(1 0 0 -1 620.3333 222.2903)"/>
+              <use xlink:href="#Stop" class="stop__el"  width="16.2" height="16.2" id="N501hly" x="-8.2" y="-8" transform="matrix(1 0 0 -1 377 147.2903)"/>
+              <use xlink:href="#Stop" class="stop__el"  width="16.2" height="16.2" id="N501aaa" x="-8.2" y="-8" transform="matrix(1 0 0 -1 278.3333 74.957)"/>
+              <use xlink:href="#Stop" class="stop__el"  width="16.2" height="16.2" id="N501gia" x="-8.2" y="-8" transform="matrix(1 0 0 -1 400.3333 72.6236)"/>
+            </g>
+    
+            <!--STOP NAMOURETTE-->
+            <g class="stop stop__line1">
+              <use xlink:href="#Stop" id="namourette_1" class="stop__el" width="16.2" height="16.2" x="-8.1" y="-8.1" transform="matrix(1 0 0 -1 565.3333 500.4646)"/>
+              <use xlink:href="#Stop" id="namourette_2" class="stop__el" width="16.2" height="16.2" x="-8.1" y="-8.1" transform="matrix(1 0 0 -1 732 378.4646)"/>
+              <use xlink:href="#Stop" id="namourette_3" class="stop__el" width="16.2" height="16.2" x="-8.1" y="-8.1" transform="matrix(1 0 0 -1 710.6667 367.1312)"/>
+              <use xlink:href="#Stop" id="namourette_4" class="stop__el" width="16.2" height="16.2" x="-8.1" y="-8.1" transform="matrix(1 0 0 -1 340.6667 410.4646)"/>
+              <use xlink:href="#Stop" id="namourette_5" class="stop__el" width="16.2" height="16.2" x="-8.1" y="-8.1" transform="matrix(1 0 0 -1 82.6667 111.7979)"/>
+            </g>
+          </g>
+          
+          <!-- BUS -->
+          <line class="bar bar--42" x1="0" y1="0" x2="0" y2="-30" style="transform: translateX(582px) translateY(441px)"/>
+          <rect class='bus bus42 bus--anim' x="-10" y="-6" width="20" height="12"/>
+          <text transform="matrix(1 0 0 1 21.4883 78.3408)" class="number number--42" style="transform: translateX(582px) translateY(441px)" x="-16" y="-40">42</text>
+
+
+
+          <line class="bar bar--52" x1="0" y1="0" x2="0" y2="-30" style="transform: translateX(38px) translateY(207.8px)"/>
+          <rect class='bus bus52 bus--anim' x="-10" y="-6" width="20" height="12"/>
+          <text transform="matrix(1 0 0 1 21.4883 78.3408)" class="number number--52" style="transform: translateX(38px) translateY(207.8px)" x="-16" y="-40">51</text>
+
+
+          <line class="bar bar--3" x1="0" y1="0" x2="0" y2="-30" style="transform: translateX(548.5px) translateY(467.1px)"/>
+          <rect class='bus bus3 bus--anim' x="-10" y="-6" width="20" height="12"/>
+          <text transform="matrix(1 0 0 1 21.4883 78.3408)" class="number number--3" style="transform: translateX(548.5px) translateY(467.1px)" x="-8" y="-40">3</text>
+
+
+
+          <line class="bar bar--33" x1="0" y1="0" x2="0" y2="-30" style="transform: translateX(439px) translateY(150.4px)"/>
+          <rect class='bus bus33 bus--anim' x="-10" y="-6" width="20" height="12"/>
+          <text transform="matrix(1 0 0 1 21.4883 78.3408)" class="number number--33" style="transform: translateX(439px) translateY(150.4px)" x="-16" y="-40">33</text>
+
+
+          <path class='bus bus1 bus--anim bus--bat' d="M -2 -12 L 20 1 L -2 12 z"/>
+        </svg>
+
+        <button class="dataPlay__btn">infos sur les bus</button>
+      </div>
+
+      <div class="infos">
+        <ul class="infos__content">
+          <li class="infos__el"><img class="infos__img" src="assets/images/busvecto3.svg" alt="Bus 3 illustration"></li>
+          <li class="infos__el">
+            <p>
+              <span class="infos__colors infos__colors--3">Arret actuel :</span>
+              <span class="infos__currentStop infos__currentStop--3"></span>
+            </p>
+            <p>
+              <span class="infos__colors infos__colors--3">Arret suivant :</span>
+              <span class="infos__nextStop infos__nextStop--3"></span>
+            </p>
+          </li>
+        </ul>
+      
+        <ul class="infos__content infos__content--right">
+          <li class="infos__el"><img class="infos__img" src="assets/images/busvecto33.svg" alt=""></li>
+          <li class="infos__el">
+            <p>
+              <span class="infos__colors infos__colors--33">Arret actuel :</span>
+              <span class="infos__currentStop infos__currentStop--33"></span>
+            </p>
+            <p>
+              <span class="infos__colors infos__colors--33">Arret suivant :</span>
+              <span class="infos__nextStop infos__nextStop--33"></span>
+            </p>
+          </li>
+        </ul>
+    
+        <ul class="infos__content">
+          <li class="infos__el"><img class="infos__img" src="assets/images/busvecto42.svg" alt=""></li>
+          <li class="infos__el">
+            <p>
+              <span class="infos__colors infos__colors--42">Arret actuel :</span>
+              <span class="infos__currentStop infos__currentStop--42"></span>
+            </p>
+            <p>
+              <span class="infos__colors infos__colors--42">Arret suivant :</span>
+              <span class="infos__nextStop infos__nextStop--42"></span>
+            </p>
+          </li>
+        </ul>
+      
+        <ul class="infos__content infos__content--right">
+          <li class="infos__el"><img class="infos__img" src="assets/images/busvecto51.svg" alt=""></li>
+          <li class="infos__el">
+            <p>
+              <span class="infos__colors infos__colors--52">Arret actuel :</span>
+              <span class="infos__currentStop infos__currentStop--52"></span>
+            </p>
+            <p>
+              <span class="infos__colors infos__colors--52">Arret suivant :</span>
+              <span class="infos__nextStop infos__nextStop--52"></span>
+            </p>
+          </li>
+        </ul>
+      
+        <ul class="infos__content">
+          <li class="infos__el"><img class="infos__img" src="assets/images/namourette.svg" alt=""></li>
+          <li class="infos__el">
+            <p>
+              <span class="infos__colors infos__colors--1">Arret actuel :</span>
+              <span class="infos__currentStop infos__currentStop--1"></span>
+            </p>
+            <p>
+              <span class="infos__colors infos__colors--1">Arret suivant :</span>
+              <span class="infos__nextStop infos__nextStop--1"></span>
+            </p>
+          </li>
+        </ul>
+        <ul class="infos__content infos__content--right">
+            <li class="infos__el">
+                <button class="btn__restart">Relancer</button>
+            </li>
+          </ul>
+      </div>
+    </section>
+
+    <section class='neonSection'>
+      <h2 class="section__titles section__titles--none">Le projet</h2>
+      <p class="neon centered">
+        <span id="neon" class="flash">Pour</span>
+        <span id="neon1" class="flash1">voir</span>
+        <span id="neon2" class="flash2">le</span>
+        <span id="neon3" class="flash3">projet,</span>
+        <span id="neon5" class="flash5">faites</span>
+        <span id="neon6" class="flash6">pivoter</span>
+        <span id="neon7" class="flash7">votre</span>
+        <span id="neon8" class="flash8">téléphone</span>
+        <span id="neon9" class="flash9">!</span>
+      </p>
+    </section>
+
+    <span class="ancres" id="team"></span>
+    <section class="section section--team">
+      <h2 class="section__titles">L'équipe</h2>
+      <ul class="team">
+        <li class="team__el">
+          <ul class="ul ul--first">
+            <li class="ul__li">
+              <a href="http://fionamiele.com/" target="_blank">
+                <img class="ul__people ul__people--fio" src="assets/images/fiona_1.jpg" srcset="assets/images/fiona_1@2x.jpg 2x" alt="Portrait de Fiona Miele">
+              </a>
+            </li>
+            <li><h3 class="h3">Fiona</h3></li>
+            <li class="">Experte en assemblage, elle a monté les différentes pièces et finalisé la construction. Elle a aussi créé notre logo et l’a animé tout en gardant l’identité du projet. Elle s’est occupée de la charte graphique dont la couleur et l’effet néon.</li>
+          </ul>
+        </li>
+
+        <li class="team__el">
+          <ul class="ul">
+            <li class="ul__li">
+              <a href="http://matteodelorenzi.be/" target="_blank">
+                <img class="ul__people" src="assets/images/matteo_1.jpg" srcset="assets/images/matteo_1@2x.jpg 2x" alt="Portrait de Matteo De Lorenzi">
+              </a>
+            </li>
+            <li><h3 class="h3">Matteo</h3></li>
+            <li>Notre mécano qui a conçu les pièces et fabriqué les différents klaxons pour le bien des oreilles de chacun. Toujours disponible pour régler les petits problèmes mécaniques. Pouet Pouet&#8239;!</li>
+          </ul>
+        </li>
+
+        <li class="team__el">
+          <ul class="ul">
+            <li class="ul__li">
+              <a href="http://maximefondu.be/" target="_blank">
+                <img class="ul__people ul__people--max" src="assets/images/maxime_1.jpg" srcset="assets/images/maxime_1@2x.jpg 2x" alt="Portrait de Maxime Fondu">
+              </a>
+            </li>
+            <li><h3 class="h3">Maxime</h3></li>
+            <li>L’ingénieur électrique qui a fait en sorte de connecter tous les circuits. Sa polyvalence a permis de styliser la trajectoire des moyens de locomotion, de leur donner une apparence mais également une voix. Grâce à lui la &#8239;&laquo;&#8239;carcasse&#8239;&raquo;&#8239; a prit vie.</li>
+          </ul>
+        </li>
+
+        <li class="team__el">
+          <ul class="ul">
+            <li class="ul__li">
+              <a href="http://yassinekarimallah.be/" target="_blank">
+                <img class="ul__people ul__people--yass" src="assets/images/yassine_1.jpg" 
+                srcset="assets/images/yassine_1@2x.jpg 2x" alt="Portrait de Yassine Karim Allah">
+              </a>
+            </li>
+            <li><h3 class="h3">Yassine</h3></li>
+            <li>Le designer de nos carrosses s’est chargé de peindre chaque pièce une par une afin d’avoir des visuels surprenant. Il aime créer de nouvelles pièces pour améliorer l’expérience utilisateur de chaque passager.</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="flex">
+    <ul class="flex__content">
+      <li class="flex__el"><small>&copy;HEAJ | DWM</small></li>
+      <li class="flex__el"><small>data-play | TEC</small></li>
+      <li class="flex__el"><small>&copy; Photos de Brandon Kinard</small></li>
+      <li class="flex__el"><small>2018 - 2019</small></li>
+    </ul>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
+    <script src="assets/scripts/menu.js"></script>
+    <script src="assets/scripts/data_play.js"></script>
+    <script src="assets/scripts/animation.js"></script>
+    <script src="assets/scripts/flash.js"></script>
+</body>
+</html>
+

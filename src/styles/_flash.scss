@@ -1,0 +1,171 @@
+// effet néon sur la phrase disant de pivoter l'écran
+.centered{
+  color: #fff;
+  text-transform: uppercase;
+  width: 150px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  margin-left: 50%;
+  transform: translateX(-50%);
+
+  @include landscape{
+      display: none;
+  }
+
+  @include sept{
+      display: none;
+  }
+}
+
+.neonSection{
+
+  @include landscape{
+    margin-bottom: 0px;
+    margin-top: 0px;
+    display: none;
+  }
+  
+  margin-bottom: 128px;
+  margin-top: 128px;
+
+@include sept{
+    display: none;
+}
+}
+
+// POUR
+.neon{
+  margin-top: 32px;
+  color: #fff;
+  font-weight: 300;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+}
+
+.neon.flash, .neon .flash{
+  color: #fff;
+  text-shadow: 0 0 50px #ff0080;
+  @include landscape{
+      display: none;
+  }
+
+  @include sept{
+      display: none;
+  }
+}
+
+// VOIR
+.neon.flash1, .neon .flash1{
+  color: #fff;
+  text-shadow: 0 0 50px #ff0080;
+  @include landscape{
+      display: none;
+  }
+
+  @include sept{
+      display: none;
+  }
+}
+
+// LE
+.neon.flash2, .neon .flash2{
+  color: #fff;
+  text-shadow: 0 0 50px #ff0080;
+  @include landscape{
+      display: none;
+  }
+
+  @include sept{
+      display: none;
+  }
+}
+
+// PROJET
+.neon.flash3, .neon .flash3{
+  color: #fff;
+  text-shadow: 0 0 50px #ff0080;
+  @include landscape{
+      display: none;
+  }
+
+  @include sept{
+      display: none;
+  }
+}
+
+// ,
+.neon.flash4, .neon .flash4{
+  color: #fff;
+  text-shadow: 0 0 50px #ff0080;
+  @include landscape{
+      display: none;
+  }
+
+  @include sept{
+      display: none;
+  }
+}
+
+// faites
+.neon.flash5, .neon .flash5{
+  color: #fff;
+  text-shadow: 0 0 50px #ff0080;
+  @include landscape{
+      display: none;
+  }
+
+  @include sept{
+      display: none;
+  }
+}
+
+// pivoter
+.neon.flash6, .neon .flash6{
+  color: #fff;
+  text-shadow: 0 0 50px #ff0080;
+  @include landscape{
+      display: none;
+  }
+
+  @include sept{
+      display: none;
+  }
+}
+
+// votre
+.neon.flash7, .neon .flash7{
+  color: #fff;
+  text-shadow: 0 0 50px #ff0080;
+  @include landscape{
+      display: none;
+  }
+
+  @include sept{
+      display: none;
+  }
+}
+
+// téléphone
+.neon.flash8, .neon .flash8{
+  color: #fff;
+  text-shadow: 0 0 50px #ff0080;
+  @include landscape{
+      display: none;
+  }
+
+  @include sept{
+      display: none;
+  }
+}
+
+// !
+.neon.flash9, .neon .flash9{
+  color: #fff;
+  text-shadow: 0 0 50px #ff0080;
+  @include landscape{
+      display: none;
+  }
+
+  @include sept{
+      display: none;
+  }
+}

@@ -1,0 +1,7 @@
+@media (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi) {
+
+        &__btn{
+            background-image: url(../assets/images/open@2x.png);
+        }
+      }

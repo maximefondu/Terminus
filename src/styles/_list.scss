@@ -1,0 +1,110 @@
+ul{
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+.team{display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 100%;
+
+  &__el{
+    @include milletrois{
+      width: 40%;
+    }
+  }
+}
+
+.ul{
+  margin-top: 70px;
+
+  &--first{
+    margin-top: 32px;
+  }
+  @include sept{
+    margin-top: 125px;
+
+    &--first{
+      margin-top: 32px;
+    }
+  }
+
+  @include mille{
+    margin-top: 78px;
+
+    &--first{
+      margin-top: 48px;
+    }
+  }
+
+  @include mille{
+    margin-top: 78px;
+}
+
+  &__li{
+  position: relative;
+      &:before{
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+      }
+  }
+
+  &__people{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    display: block;
+    margin: 0 auto;
+    border: 5px solid #ff0000;
+    box-shadow: 0px 0px 31px -3px rgba(255,0,0,1);
+    transition: all .8s cubic-bezier(.645, .045, .355, 1);
+    &:hover{
+      border: 5px solid #fff;
+      box-shadow: 0px 0px 31px -3px rgba(255,255,255,1);
+
+    }
+
+    &--max{
+      border: 5px solid #08b7ff;
+      box-shadow: 0px 0px 31px -3px rgba(08,183,255,1);
+    }
+
+    &--yass{
+      border: 5px solid #f4f40f;
+      box-shadow: 0px 0px 31px -3px rgba(244,244,15,1);
+    }
+
+    &--fio{
+      border: 5px solid #fc49fe;
+      box-shadow: 0px 0px 31px -3px rgba(252,73,254,1);
+    }
+  }
+
+
+}
+
+.liste{
+ font-family: 'Rubik', sans-serif;
+ margin: auto;
+
+ &__link{
+     font-size: 18px;
+     line-height: 65px;
+     font-weight: 500;
+     color: #FFF;
+     padding: 15px;
+     background-color: #000;
+     text-transform: uppercase;
+     text-decoration: none;
+     letter-spacing: 3px;
+     transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+ }
+}

@@ -1,0 +1,36 @@
+@mixin sd{
+    @media (min-width: #{$screen-sd}){
+      @content; //ce content, c'est les modifs que je fais dans l'autre css
+    }
+ }
+ 
+ @mixin five{
+    @media (min-width: #{$screen-five}){
+      @content;
+    }
+ }
+ 
+ @mixin sept{
+    @media (min-width: #{$screen-sept}){
+      @content;
+    }
+ }
+ 
+ @mixin mille{
+    @media (min-width: #{$screen-mille}){
+      @content;
+    }
+ }
+ 
+ @mixin milletrois{
+    @media (min-width: #{$screen-milletrois}){
+      @content;
+    }
+ }
+
+ //PORTRAIT
+ @mixin landscape{
+  @media (orientation: landscape){
+    @content;
+  }
+}
